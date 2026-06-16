@@ -57,6 +57,21 @@
   box-shadow: var(--shadow-md);
 }
 
+.persona-card[data-persona='developer'].persona-card--selected {
+  border-color: var(--color-developer);
+  background: rgba(79, 70, 229, 0.08);
+}
+
+.persona-card[data-persona='creator'].persona-card--selected {
+  border-color: var(--color-creator);
+  background: rgba(219, 39, 119, 0.08);
+}
+
+.persona-card[data-persona='student'].persona-card--selected {
+  border-color: var(--color-student);
+  background: rgba(22, 163, 74, 0.08);
+}
+
 .persona-card__emoji {
   font-size: 36px;
 }

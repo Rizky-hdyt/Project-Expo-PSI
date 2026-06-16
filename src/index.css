@@ -26,6 +26,18 @@
   --color-creator: #db2777;
   --color-student: #16a34a;
 
+  /* Indicator accent colors */
+  --color-internet: #0ea5e9;
+  --color-cost: #f59e0b;
+  --color-community: #ec4899;
+  --color-environment: #10b981;
+
+  /* Gradients */
+  --gradient-hero: linear-gradient(135deg, #eef2ff 0%, #e0f7fa 100%);
+  --gradient-developer: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+  --gradient-creator: linear-gradient(135deg, #db2777 0%, #f472b6 100%);
+  --gradient-student: linear-gradient(135deg, #16a34a 0%, #4ade80 100%);
+
   /* Typography */
   --font-base: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
 
@@ -61,6 +73,8 @@
   --color-text: #f0f0f0;
   --color-text-muted: #b0b0b8;
   --color-text-faint: #80808a;
+
+  --gradient-hero: linear-gradient(135deg, #1e1b3a 0%, #0e2f36 100%);
 }
 
 * {

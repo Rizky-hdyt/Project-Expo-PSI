@@ -25,14 +25,17 @@ export default function Landing() {
           </div>
           <div className="hero__stats">
             <div>
+              <span className="hero__stat-icon">🏘️</span>
               <strong>5</strong>
               <span>Distrik dianalisis</span>
             </div>
             <div>
+              <span className="hero__stat-icon">📊</span>
               <strong>4</strong>
               <span>Indikator kunci</span>
             </div>
             <div>
+              <span className="hero__stat-icon">⚡</span>
               <strong>&lt;60s</strong>
               <span>Waktu hasil</span>
             </div>
@@ -46,16 +49,19 @@ export default function Landing() {
           <div className="how-steps">
             <div className="how-step">
               <span className="how-step__num">1</span>
+              <span className="how-step__icon">🎯</span>
               <h3>Pilih persona & preferensi</h3>
               <p className="text-muted">Developer, Creator, atau Student — sesuaikan budget & prioritasmu.</p>
             </div>
             <div className="how-step">
               <span className="how-step__num">2</span>
+              <span className="how-step__icon">🧮</span>
               <h3>Lihat cara algoritma bekerja</h3>
               <p className="text-muted">Transparan — kamu bisa lihat bobot tiap indikator sebelum hasil keluar.</p>
             </div>
             <div className="how-step">
               <span className="how-step__num">3</span>
+              <span className="how-step__icon">🏆</span>
               <h3>Dapatkan ranking personal</h3>
               <p className="text-muted">5 distrik diurutkan sesuai kebutuhanmu, lengkap dengan data pendukung.</p>
             </div>
@@ -68,8 +74,10 @@ export default function Landing() {
           <h2 className="section__title">Untuk siapa platform ini?</h2>
           <div className="persona-grid">
             {PERSONAS.map((p) => (
-              <div key={p.key} className="persona-preview-card">
-                <span className="persona-preview-card__emoji">{p.emoji}</span>
+              <div key={p.key} className="persona-preview-card" data-persona={p.key}>
+                <span className="persona-preview-card__icon">
+                  <span className="persona-preview-card__emoji">{p.emoji}</span>
+                </span>
                 <h3>{p.name}</h3>
                 <p className="text-muted">{p.blurb}</p>
                 <span className="badge badge-primary">{p.budgetRange}</span>
@@ -83,9 +91,16 @@ export default function Landing() {
         <div className="container">
           <h2 className="section__title">5 Distrik yang Kami Analisis</h2>
           <div className="distrik-preview-grid">
-            {DISTRIK.map((d) => (
-              <Link key={d.slug} to={`/distrik/${d.slug}`} className="distrik-preview-card">
-                <span className="distrik-preview-card__emoji">{d.emoji}</span>
+            {DISTRIK.map((d, idx) => (
+              <Link
+                key={d.slug}
+                to={`/distrik/${d.slug}`}
+                className="distrik-preview-card"
+                data-accent={idx % 4}
+              >
+                <span className="distrik-preview-card__icon">
+                  <span className="distrik-preview-card__emoji">{d.emoji}</span>
+                </span>
                 <h4>{d.name}</h4>
                 <p className="text-muted">{d.tagline}</p>
               </Link>

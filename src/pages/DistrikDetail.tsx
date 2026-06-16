@@ -35,12 +35,17 @@ export default function DistrikDetail() {
         <h2>Indikator Kunci</h2>
         <div className="indicator-grid">
           {INDICATORS.map((ind) => (
-            <div key={ind.key} className="card indicator-tile">
-              <span className="indicator-tile__emoji">{ind.emoji}</span>
+            <div key={ind.key} className="card indicator-tile" data-indicator={ind.key}>
+              <span className="indicator-tile__icon">
+                <span className="indicator-tile__emoji">{ind.emoji}</span>
+              </span>
               <span className="indicator-tile__label">{ind.label}</span>
               <span className="indicator-tile__value">{indicatorValues[ind.key]}</span>
               <div className="algo-bar-track">
-                <div className="algo-bar-fill" style={{ width: `${indicatorValues[ind.key]}%` }} />
+                <div
+                  className="algo-bar-fill algo-bar-fill--indicator"
+                  style={{ width: `${indicatorValues[ind.key]}%` }}
+                />
               </div>
             </div>
           ))}

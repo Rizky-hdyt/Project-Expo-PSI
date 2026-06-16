@@ -12,10 +12,19 @@
   text-align: center;
   padding: var(--space-6);
   margin-bottom: var(--space-5);
+  background: var(--gradient-hero);
 }
 
 .detail-hero__emoji {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: var(--color-surface);
   font-size: 48px;
+  box-shadow: var(--shadow-sm);
 }
 
 .detail-hero h1 {
@@ -54,10 +63,54 @@
 
 .indicator-tile {
   padding: var(--space-4);
+  border-top: 3px solid var(--color-primary);
+}
+
+.indicator-tile[data-indicator='internet'] {
+  border-top-color: var(--color-internet);
+}
+
+.indicator-tile[data-indicator='cost'] {
+  border-top-color: var(--color-cost);
+}
+
+.indicator-tile[data-indicator='community'] {
+  border-top-color: var(--color-community);
+}
+
+.indicator-tile[data-indicator='environment'] {
+  border-top-color: var(--color-environment);
+}
+
+.indicator-tile__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-surface-muted);
+  margin-bottom: var(--space-2);
+}
+
+.indicator-tile[data-indicator='internet'] .indicator-tile__icon {
+  background: rgba(14, 165, 233, 0.12);
+}
+
+.indicator-tile[data-indicator='cost'] .indicator-tile__icon {
+  background: rgba(245, 158, 11, 0.12);
+}
+
+.indicator-tile[data-indicator='community'] .indicator-tile__icon {
+  background: rgba(236, 72, 153, 0.12);
+}
+
+.indicator-tile[data-indicator='environment'] .indicator-tile__icon {
+  background: rgba(16, 185, 129, 0.12);
 }
 
 .indicator-tile__emoji {
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .indicator-tile__label {
@@ -73,6 +126,26 @@
   font-size: 22px;
   font-weight: 800;
   margin-bottom: var(--space-2);
+}
+
+.algo-bar-fill--indicator {
+  background: var(--color-primary);
+}
+
+.indicator-tile[data-indicator='internet'] .algo-bar-fill--indicator {
+  background: var(--color-internet);
+}
+
+.indicator-tile[data-indicator='cost'] .algo-bar-fill--indicator {
+  background: var(--color-cost);
+}
+
+.indicator-tile[data-indicator='community'] .algo-bar-fill--indicator {
+  background: var(--color-community);
+}
+
+.indicator-tile[data-indicator='environment'] .algo-bar-fill--indicator {
+  background: var(--color-environment);
 }
 
 .stat-grid {
