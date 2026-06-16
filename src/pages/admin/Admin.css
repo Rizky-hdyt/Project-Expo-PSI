@@ -1,0 +1,187 @@
+/* ---------- Login ---------- */
+.admin-login {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-8) 0;
+}
+
+.admin-login__card {
+  width: 100%;
+  max-width: 420px;
+  padding: var(--space-6);
+}
+
+.admin-login__card h1 {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.admin-login__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-top: var(--space-5);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.form-field input {
+  height: var(--touch-target);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0 var(--space-3);
+  font-size: 14px;
+}
+
+.form-field input:focus {
+  border-color: var(--color-primary);
+}
+
+.form-error {
+  color: var(--color-danger);
+  font-size: 13px;
+}
+
+.admin-login__demo {
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  font-size: 13px;
+}
+
+.admin-login__demo code {
+  background: var(--color-surface-muted);
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+}
+
+/* ---------- Dashboard ---------- */
+.admin-dashboard {
+  padding: var(--space-6) 0 var(--space-8);
+}
+
+.admin-dashboard__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-5);
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.admin-dashboard__header h1 {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.admin-tabs {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+  flex-wrap: wrap;
+}
+
+.admin-tab {
+  min-height: var(--touch-target);
+  padding: 0 var(--space-4);
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--color-border);
+  background: var(--color-surface);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.admin-tab--active {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+.admin-panel {
+  padding: var(--space-5);
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.admin-table th {
+  text-align: left;
+  padding: var(--space-2) var(--space-3);
+  color: var(--color-text-muted);
+  font-weight: 600;
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+
+.admin-table td {
+  padding: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+
+.csv-input {
+  margin: var(--space-3) 0;
+}
+
+.csv-preview {
+  margin-top: var(--space-4);
+}
+
+.csv-preview h3 {
+  font-size: 14px;
+  margin-bottom: var(--space-2);
+}
+
+/* ---------- Modal ---------- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 20, 30, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+  z-index: 100;
+}
+
+.modal-content {
+  width: 100%;
+  max-width: 440px;
+  padding: var(--space-6);
+}
+
+.modal-content h3 {
+  font-size: 18px;
+  margin-bottom: var(--space-4);
+}
+
+.edit-slider-row {
+  margin-bottom: var(--space-4);
+}
+
+.edit-slider-row label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: var(--space-2);
+}
+
+@media (max-width: 480px) {
+  .admin-dashboard__header {
+    flex-direction: column;
+  }
+}
